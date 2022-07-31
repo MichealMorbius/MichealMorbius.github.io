@@ -87,11 +87,10 @@ setInterval(() =>{
         ampm = "PM";
     }
     let livetime = `${h}:${m}:${s} ${ampm}`
-    console.log(livetime)
+    
     let targettime = "4:31:7 PM"
     let endtime = "10:31:7 PM"
     if(targettime == livetime){
-        console.log("Target reached")
         schemesel.style.display = "none"
         threeam.style.display = "block"
         setInterval(() =>{
@@ -122,7 +121,6 @@ setInterval(() =>{
         profilekard.style.backdropFilter = "blur(1px)"
     }
     if(endtime == livetime){
-    console.log("End time reached")
     threeam.style.display = "none"
     schemesel.style.display = "block"
     body.style.backgroundImage = "url(Assets/Images/default.png)"
