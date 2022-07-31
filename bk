@@ -1,0 +1,18 @@
+/*
+    if(endtime == livetime){
+        console.log("End time reached")
+    threeam.style.display = "none"
+    schemesel.style.display = "block"
+    body.style.backgroundImage = "url(Assets/Images/default.png)"
+    tex.style.color = "aqua"
+    tex.style.textShadow = "0px 0px 10px aqua"
+    Avatar.style.border = "3px solid aqua"
+    Avatar.style.boxShadow = "0px 0px 10px aqua"
+    Avatar.style.padding = "5px"
+    source.style.textDecoration = "none"
+    source.style.color = "aqua"
+    source.style.textShadow = "0px 0px 10px aqua"
+    profilekard.style.backdropFilter = "blur(20px)"
+    profilekard.style.backdropFilter = "greyscale(0%)"
+    }
+    */

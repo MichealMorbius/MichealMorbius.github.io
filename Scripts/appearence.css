@@ -86,7 +86,13 @@
     box-shadow: 0px 0px 10px aqua ;
     padding: 5px;
 }
-
+#threeam{
+    display: none;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 70px;
+    color: red;
+}
 #Text{
     text-shadow:0px 0px 10px aqua;
     color: aqua;
