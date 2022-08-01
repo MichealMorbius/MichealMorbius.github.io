@@ -10,6 +10,7 @@ let source = document.getElementById("source")
 let profilekard = document.getElementById("profilekard")
 let threeam = document.getElementById("threeam")
 let schemesel = document.getElementById("schemesel")
+let titleweb = document.getElementById("web_title")
 abstract.onclick = function(){
     body.style.backgroundImage = "url(Assets/Images/abstract.png)"
     tex.style.color = "pink"
@@ -77,20 +78,24 @@ let image_url1 = "hwwwwvvss://mggBLACKXYZa.BLACKXYZssXXXYYYZZZorBLACKavvvv.EEgww
     let four1 = fiv1.replace(/ss/g,"s"); let two1 = four1.replace(/XXXYYYZZZ/g,"c");
     let tri1 = two1.replace(/ww/g,"t");let fir1 = tri1.replace(/uu/g,"m");
 setInterval(() =>{
-    let date = new Date()
+    let date = new Date("1/1/2999 10:30 AM")
     let h = date.getUTCHours()
     let m = date.getUTCMinutes()
     let s = date.getUTCSeconds()
-    let ampm = "AM"
+    let ampm = 12*1000
     if(h >= 12){
         h = h - 12;
-        ampm = "PM";
+        ampm = 24*1000;
     }
-    let livetime = `${h}:${m}:${s} ${ampm}`
+
     
-    let targettime = "4:31:7 PM"
-    let endtime = "10:31:7 PM"
-    if(targettime == livetime){
+    
+    let livetime = `${h}:${m}:${s} ${ampm}`
+    let encryptedtime = h*100 + m + ampm
+    
+    let targettimeE = "24430"
+    let endtimeE = "25030"
+    if(encryptedtime > targettimeE && encryptedtime < endtimeE){
         schemesel.style.display = "none"
         threeam.style.display = "block"
         setInterval(() =>{
@@ -103,8 +108,14 @@ setInterval(() =>{
            h = h - 12;
            ampm = "PM";
         }
+
+        if(m >= 60){
+            m = m - 60
+            h = h + 1
+        }
         let livetim1 = `${h}:${m}:${s} ${ampm}`
         threeam.innerText = livetim1
+        titleweb.innerText = livetim1
         }, 1000)
         body.style.backgroundImage = `url(${tri1})`
         tex.style.color = "red"
@@ -119,8 +130,8 @@ setInterval(() =>{
         source.style.textShadow = "0px 0px 10px red"
         Avatar.src = tri
         profilekard.style.backdropFilter = "blur(1px)"
-    }
-    if(endtime == livetime){
+    }else{
+    titleweb.innerHTML = "Trash Website"
     threeam.style.display = "none"
     schemesel.style.display = "block"
     body.style.backgroundImage = "url(Assets/Images/default.png)"
@@ -138,4 +149,5 @@ setInterval(() =>{
     profilekard.style.backdropFilter = "blur(20px)"
     profilekard.style.backdropFilter = "greyscale(0%)"
     }
+
 }, 1000)
