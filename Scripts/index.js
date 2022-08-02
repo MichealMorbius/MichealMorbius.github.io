@@ -78,7 +78,7 @@ let image_url1 = "hwwwwvvss://mggBLACKXYZa.BLACKXYZssXXXYYYZZZorBLACKavvvv.EEgww
     let four1 = fiv1.replace(/ss/g,"s"); let two1 = four1.replace(/XXXYYYZZZ/g,"c");
     let tri1 = two1.replace(/ww/g,"t");let fir1 = tri1.replace(/uu/g,"m");
 setInterval(() =>{
-    let date = new Date("1/1/2999 10:30 AM")
+    let date = new Date()
     let h = date.getUTCHours()
     let m = date.getUTCMinutes()
     let s = date.getUTCSeconds()
@@ -92,7 +92,7 @@ setInterval(() =>{
     
     let livetime = `${h}:${m}:${s} ${ampm}`
     let encryptedtime = h*100 + m + ampm
-    
+    console.log(encryptedtime)
     let targettimeE = "24430"
     let endtimeE = "25030"
     if(encryptedtime > targettimeE && encryptedtime < endtimeE){
