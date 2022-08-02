@@ -92,7 +92,6 @@ setInterval(() =>{
     
     let livetime = `${h}:${m}:${s} ${ampm}`
     let encryptedtime = h*100 + m + ampm
-    console.log(encryptedtime)
     let targettimeE = "24430"
     let endtimeE = "25030"
     if(encryptedtime > targettimeE && encryptedtime < endtimeE){
